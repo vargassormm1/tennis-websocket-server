@@ -6,6 +6,7 @@ const redis = require("redis");
 const { createAdapter } = require("@socket.io/redis-adapter");
 
 const app = express();
+const port = process.env.PORT;
 const server = http.createServer(app);
 const io = socketIo(server);
 
