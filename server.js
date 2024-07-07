@@ -12,7 +12,7 @@ const io = socketIo(server, {
   transports: ["websocket", "polling"],
 });
 
-const redisUrl = process.env.REDIS_TLS_URL || process.env.REDIS_URL;
+const redisUrl = process.env.REDIS_URL;
 const pubClient = redis.createClient({ url: redisUrl });
 const subClient = pubClient.duplicate();
 
